@@ -1,0 +1,50 @@
+@use './partials/variables' as *;
+@use './partials/global' as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Avenir', Tahoma, sans-serif;
+}
+
+.header {
+  background-color: $dark-background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 1rem;
+
+  &__logo {
+    max-width: 7.5rem;
+  }
+
+  &__link-container {
+    display: flex;
+    height: 3.25rem;
+    width: 100%;
+  }
+
+  &__link {
+    text-decoration: none;
+    flex-basis: 50%;
+    color: $cta-inactive-color;
+    
+    &:hover {
+      border-bottom: 5px solid $border-color;
+      color: $bright-text-color;
+    }
+
+    &--current {
+      border-bottom: 5px solid $border-color;
+      color: $bright-text-color;
+      font-weight: 700;
+    }
+  }
+
+  &__link-tab {
+    text-align: center;
+  }
+}
