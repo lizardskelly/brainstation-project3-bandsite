@@ -53,4 +53,19 @@ body {
 }
 .header__link-tab {
   text-align: center;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+}
+.hero__title {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-left: 1rem;
 }/*# sourceMappingURL=bio.css.map */
