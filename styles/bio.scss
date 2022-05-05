@@ -1,6 +1,6 @@
 @use './partials/variables' as *;
 @use './partials/global' as *;
-
+// removing default margins/padding and setting my own defaults
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@ body {
   font-size: 16px;
   font-family: 'Avenir', Tahoma, sans-serif;
 }
-
+// header styling
 .header {
   background-color: $dark-background-color;
   display: flex;
@@ -48,9 +48,9 @@ body {
     text-align: center;
   }
 }
-
+// hero styling
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../assets/images/hero-bio.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, .5), rgba(50, 50, 50, .5)), url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
   height: 35vh;
@@ -62,5 +62,68 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     padding-left: 1rem;
+  }
+}
+// about the band styling
+.about {
+  color: $dark-text-color;
+  padding: .5rem 1rem;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__quote {
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+
+  &__quote-source {
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: .5rem;
+  }
+
+  &__sub-title {
+    font-size: .875rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+  }
+
+  &__text {
+    font-size: .8rem;
+    line-height: 18px;
+  }
+}
+// photo gallery styling
+.gallery {
+  padding: .5rem 1rem 0 1rem;
+  background-color: $light-background-color-alt;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+
+  &__image-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
   }
 }

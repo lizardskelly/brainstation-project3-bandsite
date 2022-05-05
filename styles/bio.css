@@ -56,7 +56,7 @@ body {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../assets/images/hero-bio.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
   height: 35vh;
@@ -68,4 +68,58 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   padding-left: 1rem;
+}
+
+.about {
+  color: #323232;
+  padding: 0.5rem 1rem;
+}
+.about__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.about__image {
+  width: 100%;
+}
+.about__quote {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+.about__quote-source {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 22px;
+  margin-top: 0.5rem;
+}
+.about__sub-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+.about__text {
+  font-size: 0.8rem;
+  line-height: 18px;
+}
+
+.gallery {
+  padding: 0.5rem 1rem 0 1rem;
+  background-color: #FAFAFA;
+}
+.gallery__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.gallery__image-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.gallery__image {
+  width: 100%;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=bio.css.map */
