@@ -18,7 +18,12 @@ body {
 
   @include tablet {
     flex-direction: row;
+    height: 4rem;
     padding: 1rem 2rem 0 2rem;
+  }
+
+  @include desktop {
+    padding-left: 8rem;
   }
 
   &__logo {
@@ -48,6 +53,7 @@ body {
     @include tablet {
       margin-right: 3rem;
       font-size: .9rem;
+      padding-bottom: 3.25rem;
     }
     
     &:hover {
@@ -71,12 +77,12 @@ body {
   background-image: linear-gradient(rgba(50, 50, 50, .5), rgba(50, 50, 50, .5)), url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
-  height: 70vw;
+  height: 60vw;
   display: flex;
   align-items: center;
 
-  @include tablet {
-    height: 70vh;
+  @include desktop {
+    height: 50vw;
   }
 
   &__title {
@@ -88,6 +94,10 @@ body {
     @include tablet {
       font-size: 3.75rem;
       padding-left: 2.25rem;
+    }
+
+    @include desktop {
+      padding-left: 8rem;
     }
   }
 }
@@ -106,6 +116,10 @@ body {
     @include tablet {
       margin: 0 6rem;
     }
+
+    @include desktop {
+      margin: 0 12rem;
+    }
   }
 
   &__title {
@@ -121,6 +135,10 @@ body {
       font-size: 2.25rem;
       margin-left: 2.25rem;
     }
+
+    @include desktop {
+      margin-left: 8rem;
+    }
   }
 
   &__image {
@@ -129,6 +147,10 @@ body {
 
     @include tablet {
       height: 45vw;
+    }
+
+    @include desktop {
+      height: 40vw
     }
   }
 
@@ -141,6 +163,10 @@ body {
     @include tablet {
       font-size: 1.5rem;
       line-height: 32px;
+    }
+
+    @include desktop {
+      width: 80%;
     }
   }
 
@@ -192,15 +218,20 @@ body {
   padding-top: .5rem;
   padding-bottom: .75rem;
   background-color: $light-background-color-alt;
+  //start point
+  padding: .5rem 1rem .75rem 1rem;
 
   @include tablet {
-    padding-top: 2rem;
+    padding: 2rem 2.25rem .75rem 2.25rem;
+  }
+
+  @include desktop {
+    padding: 2rem 8rem .75rem 8rem;
   }
 
   &__title {
     font-size: 7vw;
     font-weight: 600;
-    margin: 1rem;
 
     @media screen and (min-width: 425px) {
       font-size: 1.85rem;
@@ -208,18 +239,15 @@ body {
 
     @include tablet {
       font-size: 2.25rem;
-      margin-left: 2.25rem;
     }
   }
 
   &__image-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 1rem;
 
     @include tablet {
       justify-content: space-between;
-      padding: 0 2.25rem;
     }
   }
 
@@ -247,6 +275,10 @@ body {
     position: relative;
   }
 
+  @include desktop {
+    padding: 2rem 8rem;
+  }
+
   &__logo {
     width: 7.5rem;
 
@@ -254,6 +286,10 @@ body {
       position: absolute;
       top: 3.75rem;
       right: 2.25rem;
+    }
+
+    @include desktop {
+      right: 8rem;
     }
   }
 
@@ -296,6 +332,11 @@ body {
       margin-left: 2rem;
       width: 20%;
     }
+
+    @include desktop {
+      margin-left: 3rem;
+      width: 13%;
+    }
   }
   
   &__image {
@@ -316,6 +357,10 @@ body {
     font-size: .9rem;
   }
 
+  @include desktop {
+    width: 70%;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -332,6 +377,14 @@ body {
 
     @include tablet {
       margin: 1rem 0;
+    }
+  }
+
+  &__email {
+    color: $bright-text-color;
+
+    &--link {
+      text-decoration: none;
     }
   }
 }
