@@ -40,7 +40,7 @@ body {
     &--current {
       border-bottom: 5px solid $border-color;
       color: $bright-text-color;
-      font-weight: 700;
+      font-weight: 400;
     }
   }
 
@@ -60,7 +60,7 @@ body {
   &__title {
     color: $bright-text-color;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     padding-left: 1rem;
   }
 }
@@ -72,7 +72,7 @@ body {
   &__title {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: .5rem;
+    margin: 1rem 0 1rem 0;
   }
 
   &__image {
@@ -111,8 +111,8 @@ body {
 
   &__title {
     font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
+    font-weight: 600;
+    margin: 1rem 0;
   }
 
   &__image-container {
@@ -125,5 +125,63 @@ body {
     width: 100%;
     padding-right: 1rem;
     margin-bottom: 1rem;
+  }
+}
+// footer styling
+.footer {
+  background-color: $dark-background-color;
+  padding: .5rem 1rem;
+
+  &__logo {
+    width: 7.5rem;
+  }
+
+  &__copyright {
+    font-size: .7rem;
+    color: $bright-text-color;
+  }
+}
+
+.social {
+   
+    &__title {
+      color: $bright-text-color;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: .75rem;
+    }
+    
+    &__image-container {
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+      max-width: 10rem
+    }
+  
+    &__image {
+      height: 1.5rem;
+    }
+  }
+
+.contact {
+  margin: 1.5rem 0 3rem 0;
+  color: $bright-text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: 600;
+    line-height: 1.5em;
+  }
+
+  &__text {
+    line-height: 1.5em;
+    margin: 0;
   }
 }

@@ -49,7 +49,7 @@ body {
 .header__link--current {
   border-bottom: 5px solid #E1E1E1;
   color: #FFF;
-  font-weight: 700;
+  font-weight: 400;
 }
 .header__link-tab {
   text-align: center;
@@ -66,7 +66,7 @@ body {
 .hero__title {
   color: #FFF;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   padding-left: 1rem;
 }
 
@@ -77,7 +77,7 @@ body {
 .about__title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0 1rem 0;
 }
 .about__image {
   width: 100%;
@@ -110,8 +110,8 @@ body {
 }
 .gallery__title {
   font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
 }
 .gallery__image-container {
   display: flex;
@@ -122,4 +122,52 @@ body {
   width: 100%;
   padding-right: 1rem;
   margin-bottom: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 0.5rem 1rem;
+}
+.footer__logo {
+  width: 7.5rem;
+}
+.footer__copyright {
+  font-size: 0.7rem;
+  color: #FFF;
+}
+
+.social__title {
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.social__image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  max-width: 10rem;
+}
+.social__image {
+  height: 1.5rem;
+}
+
+.contact {
+  margin: 1.5rem 0 3rem 0;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+}
+.contact__name {
+  font-weight: 600;
+  line-height: 1.5em;
+}
+.contact__text {
+  line-height: 1.5em;
+  margin: 0;
 }/*# sourceMappingURL=bio.css.map */
