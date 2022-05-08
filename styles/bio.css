@@ -101,7 +101,7 @@ body {
 @media screen and (min-width: 768px) {
   .hero__title {
     font-size: 3.75rem;
-    padding-left: 2rem;
+    padding-left: 2.25rem;
   }
 }
 
@@ -130,12 +130,13 @@ body {
 @media screen and (min-width: 425px) {
   .about__title {
     font-size: 1.85rem;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
   .about__title {
     font-size: 2.25rem;
-    margin-left: 2rem;
+    margin-left: 2.25rem;
   }
 }
 .about__image {
@@ -167,7 +168,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__quote-source {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 32px;
   }
 }
@@ -191,6 +192,7 @@ body {
     font-size: 1rem;
     line-height: 22px;
     width: 47%;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -201,48 +203,115 @@ body {
 }
 
 .gallery {
-  padding: 0.5rem 1rem 0 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
   background-color: #FAFAFA;
 }
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-top: 2rem;
+  }
+}
 .gallery__title {
-  font-size: 1.5rem;
+  font-size: 7vw;
   font-weight: 600;
-  margin: 1rem 0;
+  margin: 1rem;
+}
+@media screen and (min-width: 425px) {
+  .gallery__title {
+    font-size: 1.85rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 2.25rem;
+    margin-left: 2.25rem;
+  }
 }
 .gallery__image-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__image-container {
+    justify-content: space-between;
+    padding: 0 2.25rem;
+  }
 }
 .gallery__image {
   width: 100%;
-  padding-right: 1rem;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__image {
+    margin: 0 1.5rem 1.5rem 0;
+    width: 31%;
+  }
+}
+.gallery__image:nth-child(3n) {
+  margin-right: 0;
 }
 
 .footer {
   background-color: #323232;
   padding: 0.5rem 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem 2.25rem;
+    position: relative;
+  }
+}
 .footer__logo {
   width: 7.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    position: absolute;
+    top: 3.75rem;
+    right: 2.25rem;
+  }
 }
 .footer__copyright {
   font-size: 0.7rem;
   color: #FFF;
 }
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 0.9rem;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .social {
+    display: flex;
+    align-items: center;
+  }
+}
 .social__title {
   color: #FFF;
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
+@media screen and (min-width: 768px) {
+  .social__title {
+    font-size: 2.25rem;
+    margin-top: 1rem;
+  }
+}
 .social__image-container {
   display: flex;
   justify-content: space-between;
   width: 45%;
   max-width: 10rem;
+}
+@media screen and (min-width: 768px) {
+  .social__image-container {
+    margin-left: 2rem;
+    width: 20%;
+  }
 }
 .social__image {
   height: 1.5rem;
@@ -255,6 +324,13 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
 }
+@media screen and (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+}
 .contact__container {
   display: flex;
   flex-direction: column;
@@ -266,4 +342,9 @@ body {
 .contact__text {
   line-height: 1.5em;
   margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .contact__text {
+    margin: 1rem 0;
+  }
 }/*# sourceMappingURL=bio.css.map */
