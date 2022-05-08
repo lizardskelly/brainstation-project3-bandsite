@@ -14,23 +14,41 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding-top: 1rem;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 1rem 2rem 0 2rem;
+  }
 
   &__logo {
     max-width: 7.5rem;
+    
+    @include tablet {
+      margin-right: 3rem;
+      padding-bottom: .5rem;
+    }
   }
 
   &__link-container {
     display: flex;
     height: 3.25rem;
     width: 100%;
+
+    @include tablet {
+      width: fit-content;
+    }
   }
 
   &__link {
     text-decoration: none;
     flex-basis: 50%;
     color: $cta-inactive-color;
+
+    @include tablet {
+      margin-right: 3rem;
+      font-size: .9rem;
+    }
     
     &:hover {
       border-bottom: 5px solid $border-color;
@@ -53,15 +71,24 @@ body {
   background-image: linear-gradient(rgba(50, 50, 50, .5), rgba(50, 50, 50, .5)), url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
-  height: 35vh;
+  height: 70vw;
   display: flex;
   align-items: center;
 
+  @include tablet {
+    height: 70vh;
+  }
+
   &__title {
     color: $bright-text-color;
-    font-size: 1.5rem;
+    font-size: 7.5vw;
     font-weight: 600;
     padding-left: 1rem;
+
+    @include tablet {
+      font-size: 3.75rem;
+      padding-left: 2rem;
+    }
   }
 }
 // about the band styling

@@ -26,21 +26,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    padding: 1rem 2rem 0 2rem;
+  }
 }
 .header__logo {
   max-width: 7.5rem;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 3rem;
+    padding-bottom: 0.5rem;
+  }
 }
 .header__link-container {
   display: flex;
   height: 3.25rem;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .header__link-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .header__link {
   text-decoration: none;
   flex-basis: 50%;
   color: #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .header__link {
+    margin-right: 3rem;
+    font-size: 0.9rem;
+  }
 }
 .header__link:hover {
   border-bottom: 5px solid #E1E1E1;
@@ -59,15 +83,26 @@ body {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-bio.jpg);
   background-position: center;
   background-size: cover;
-  height: 35vh;
+  height: 70vw;
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+}
 .hero__title {
   color: #FFF;
-  font-size: 1.5rem;
+  font-size: 7.5vw;
   font-weight: 600;
   padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    padding-left: 2rem;
+  }
 }
 
 .about {
