@@ -82,6 +82,7 @@ body {
 
   @include desktop {
     height: 50vw;
+    max-height: 40rem;
   }
 
   &__title {
@@ -125,6 +126,7 @@ body {
     font-size: 7vw;
     font-weight: 600;
     margin: 1rem;
+
     // helps title text stay smooth when increasing screen size
     @media screen and (min-width: 425px) {
       font-size: 1.85rem;
@@ -202,8 +204,8 @@ body {
     &--display {
       
       @include tablet {
-      display: flex;
-      justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
@@ -226,6 +228,7 @@ body {
   &__title {
     font-size: 7vw;
     font-weight: 600;
+
     // helps title text stay smooth when increasing screen size
     @media screen and (min-width: 425px) {
       font-size: 1.85rem;
@@ -252,7 +255,7 @@ body {
 
     @include tablet {
       margin: 0 1.5rem 1.5rem 0;
-      width: 31%;
+      width: calc((100% - 3rem) / 3);
     }
 
     &:nth-child(3n) {
@@ -262,10 +265,10 @@ body {
     &:hover {
       filter: grayscale(0);
       transition-duration: .5s;
-    // grows the image at tablet+ resolutions when hovering
+      // grows the image at tablet+ resolutions when hovering
       @include tablet {
-      animation: imageGrow .5s forwards;
-      z-index: 1;
+        animation: imageGrow .5s forwards;
+        z-index: 1;
       }
     }
     @keyframes imageGrow {
@@ -317,7 +320,6 @@ body {
 }
 
 .social {
-
   @include tablet {
     display: flex;
     align-items: center;
@@ -381,11 +383,11 @@ body {
 
   &__name {
     font-weight: 600;
-    line-height: 1.5em;
+    line-height: 24px;
   }
 
   &__text {
-    line-height: 1.5em;
+    line-height: 24px;
     margin: 0;
 
     @include tablet {

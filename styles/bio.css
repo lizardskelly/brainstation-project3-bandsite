@@ -97,6 +97,7 @@ body {
 @media screen and (min-width: 1280px) {
   .hero {
     height: 50vw;
+    max-height: 40rem;
   }
 }
 .hero__title {
@@ -282,7 +283,7 @@ body {
 @media screen and (min-width: 768px) {
   .gallery__image {
     margin: 0 1.5rem 1.5rem 0;
-    width: 31%;
+    width: calc((100% - 3rem) / 3);
   }
 }
 .gallery__image:nth-child(3n) {
@@ -421,10 +422,10 @@ body {
 }
 .contact__name {
   font-weight: 600;
-  line-height: 1.5em;
+  line-height: 24px;
 }
 .contact__text {
-  line-height: 1.5em;
+  line-height: 24px;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
