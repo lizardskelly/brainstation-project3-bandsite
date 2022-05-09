@@ -63,7 +63,7 @@ body {
 
     &--current {
       @include link-border;
-      font-weight: 400;
+      font-weight: 600;
     }
   }
 
@@ -125,6 +125,7 @@ body {
     font-size: 7vw;
     font-weight: 600;
     margin: 1rem;
+    // helps title text stay smooth when increasing screen size
     @media screen and (min-width: 425px) {
       font-size: 1.85rem;
       margin-bottom: 2rem;
@@ -225,7 +226,7 @@ body {
   &__title {
     font-size: 7vw;
     font-weight: 600;
-
+    // helps title text stay smooth when increasing screen size
     @media screen and (min-width: 425px) {
       font-size: 1.85rem;
     }
@@ -240,13 +241,14 @@ body {
     flex-wrap: wrap;
 
     @include tablet {
-      justify-content: space-between;
+      justify-content: center;
     }
   }
 
   &__image {
     width: 100%;
     margin-bottom: 1rem;
+    filter: grayscale(75%);
 
     @include tablet {
       margin: 0 1.5rem 1.5rem 0;
@@ -255,6 +257,23 @@ body {
 
     &:nth-child(3n) {
       margin-right: 0;
+    }
+
+    &:hover {
+      filter: grayscale(0);
+    // grows the image at tablet+ resolutions when hovering
+      @include tablet {
+      animation: imageGrow .5s forwards;
+      z-index: 1;
+      }
+    }
+    @keyframes imageGrow {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.25);
+      }
     }
   }
 }
