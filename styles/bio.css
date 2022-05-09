@@ -290,6 +290,7 @@ body {
 }
 .gallery__image:hover {
   filter: grayscale(0);
+  transition-duration: 0.5s;
 }
 @media screen and (min-width: 768px) {
   .gallery__image:hover {

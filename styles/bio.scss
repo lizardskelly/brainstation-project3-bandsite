@@ -261,6 +261,7 @@ body {
 
     &:hover {
       filter: grayscale(0);
+      transition-duration: .5s;
     // grows the image at tablet+ resolutions when hovering
       @include tablet {
       animation: imageGrow .5s forwards;
