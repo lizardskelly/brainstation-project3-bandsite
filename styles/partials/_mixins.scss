@@ -1,0 +1,13 @@
+@use './variables' as *;
+@use './global' as *;
+
+@mixin link-border {
+  border-bottom: 5px solid $border-color;
+  color: $bright-text-color;
+}
+
+@mixin mobile-body-text {
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 22px;
+}

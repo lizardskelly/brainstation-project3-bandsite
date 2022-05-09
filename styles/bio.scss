@@ -1,5 +1,6 @@
 @use './partials/variables' as *;
 @use './partials/global' as *;
+@use './partials/mixins' as *;
 // removing default margins/padding and setting my own defaults
 body {
   margin: 0;
@@ -57,13 +58,11 @@ body {
     }
     
     &:hover {
-      border-bottom: 5px solid $border-color;
-      color: $bright-text-color;
+      @include link-border;
     }
 
     &--current {
-      border-bottom: 5px solid $border-color;
-      color: $bright-text-color;
+      @include link-border;
       font-weight: 400;
     }
   }
@@ -155,9 +154,7 @@ body {
   }
 
   &__quote {
-    font-size: .875rem;
-    font-weight: 600;
-    line-height: 22px;
+    @include mobile-body-text;
     margin-bottom: 0;
 
     @include tablet {
@@ -171,9 +168,7 @@ body {
   }
 
   &__quote-source {
-    font-size: .875rem;
-    font-weight: 600;
-    line-height: 22px;
+    @include mobile-body-text;
     margin-top: .5rem;
 
     @include tablet {
@@ -183,8 +178,7 @@ body {
   }
 
   &__sub-title {
-    font-size: .875rem;
-    font-weight: 600;
+    @include mobile-body-text;
     margin-top: 1.5rem;
 
     @include tablet {
@@ -218,7 +212,6 @@ body {
   padding-top: .5rem;
   padding-bottom: .75rem;
   background-color: $light-background-color-alt;
-  //start point
   padding: .5rem 1rem .75rem 1rem;
 
   @include tablet {
