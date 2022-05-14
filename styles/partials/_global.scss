@@ -1,3 +1,6 @@
+@use './variables' as *;
+@use './mixins' as *;
+
 //fonts
 
 @font-face {
@@ -21,16 +24,187 @@
   font-weight: 600;
 }
 
-//media queries 
+// header styling
+.header {
+  background-color: $dark-background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
 
-@mixin tablet {
-  @media screen and (min-width: 768px) {
-    @content;
+  @include tablet {
+    flex-direction: row;
+    height: 4rem;
+    padding: 1rem 2rem 0 2rem;
+  }
+
+  @include desktop {
+    padding-left: 8rem;
+  }
+
+  &__logo {
+    max-width: 7.5rem;
+    
+    @include tablet {
+      margin-right: 3rem;
+      padding-bottom: .5rem;
+    }
+  }
+
+  &__link-container {
+    display: flex;
+    height: 3.25rem;
+    width: 100%;
+
+    @include tablet {
+      width: fit-content;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    flex-basis: 50%;
+    color: $cta-inactive-color;
+
+    @include tablet {
+      margin-right: 3rem;
+      font-size: .9rem;
+      padding-bottom: 3.25rem;
+    }
+    
+    &:hover {
+      @include link-border;
+    }
+
+    &--current {
+      @include link-border;
+      font-weight: 600;
+    }
+  }
+
+  &__link-tab {
+    text-align: center;
+  }
+}
+// footer styling
+.footer {
+  background-color: $dark-background-color;
+  padding: .5rem 1rem;
+
+  @include tablet {
+    padding: 2rem 2.25rem;
+    position: relative;
+  }
+
+  @include desktop {
+    padding: 2rem 8rem;
+  }
+
+  &__logo {
+    width: 7.5rem;
+
+    @include tablet {
+      position: absolute;
+      top: 3.75rem;
+      right: 2.25rem;
+    }
+
+    @include desktop {
+      right: 8rem;
+    }
+  }
+
+  &__copyright {
+    font-size: .7rem;
+    color: $bright-text-color;
+
+    @include tablet {
+      font-size: .9rem;
+    }
   }
 }
 
-@mixin desktop {
-  @media screen and (min-width: 1280px) {
-    @content;
+.social {
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+   
+  &__title {
+    color: $bright-text-color;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: .75rem;
+
+    @include tablet {
+      font-size: 2.25rem;
+      margin-top: 1rem;
+    }
+  }
+    
+  &__image-container {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    max-width: 10rem;
+
+    @include tablet {
+      margin-left: 2rem;
+      width: 20%;
+    }
+
+    @include desktop {
+      margin-left: 3rem;
+      width: 13%;
+    }
+  }
+  
+  &__image {
+    height: 1.5rem;
+  }
+}
+
+.contact {
+  margin: 1.5rem 0 3rem 0;
+  color: $bright-text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: .9rem;
+  }
+
+  @include desktop {
+    width: 70%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  &__text {
+    line-height: 24px;
+    margin: 0;
+
+    @include tablet {
+      margin: 1rem 0;
+    }
+  }
+
+  &__email {
+    color: $bright-text-color;
+
+    &--link {
+      text-decoration: none;
+    }
   }
 }
