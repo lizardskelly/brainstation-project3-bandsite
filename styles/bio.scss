@@ -1,14 +1,7 @@
 @use './partials/variables' as *;
 @use './partials/global' as *;
 @use './partials/mixins' as *;
-// removing default margins/padding and setting my own defaults
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'Avenir', Tahoma, sans-serif;
-}
+
 // hero styling
 .hero {
   background-image: linear-gradient(rgba(50, 50, 50, .5), rgba(50, 50, 50, .5)), url(../assets/images/hero-bio.jpg);
@@ -372,10 +365,6 @@ body {
       height: 3rem;
       width: 3rem;
     }
-  }
-
-  &__text-wrapper {
-   
   }
 
   &__info-wrapper {

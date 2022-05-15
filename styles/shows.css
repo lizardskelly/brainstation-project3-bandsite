@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(/assets/fonts/AvenirNextLTPro.ttf) format("truetype"), url(/assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/assets/fonts/AvenirNextLTProBold.ttf) format("truetype"), url(/assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(/assets/fonts/AvenirNextLTProDemi.ttf) format("truetype"), url(/assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-weight: 600;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Avenir", Tahoma, sans-serif;
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    height: 4rem;
+    padding: 1rem 2rem 0 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    padding-left: 8rem;
+  }
+}
+.header__logo {
+  max-width: 7.5rem;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 3rem;
+    padding-bottom: 0.5rem;
+  }
+}
+.header__link-container {
+  display: flex;
+  height: 3.25rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__link-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.header__link {
+  text-decoration: none;
+  flex-basis: 50%;
+  color: #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .header__link {
+    margin-right: 3rem;
+    font-size: 0.9rem;
+    padding-bottom: 3.25rem;
+  }
+}
+.header__link:hover {
+  border-bottom: 5px solid #E1E1E1;
+  color: #FFF;
+}
+.header__link--current {
+  border-bottom: 5px solid #E1E1E1;
+  color: #FFF;
+  font-weight: 600;
+}
+.header__link-tab {
+  text-align: center;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 0.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem 2.25rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding: 2rem 8rem;
+  }
+}
+.footer__logo {
+  width: 7.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    position: absolute;
+    top: 3.75rem;
+    right: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo {
+    right: 8rem;
+  }
+}
+.footer__copyright {
+  font-size: 0.7rem;
+  color: #FFF;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    display: flex;
+    align-items: center;
+  }
+}
+.social__title {
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .social__title {
+    font-size: 2.25rem;
+    margin-top: 1rem;
+  }
+}
+.social__image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  max-width: 10rem;
+}
+@media screen and (min-width: 768px) {
+  .social__image-container {
+    margin-left: 2rem;
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .social__image-container {
+    margin-left: 3rem;
+    width: 13%;
+  }
+}
+.social__image {
+  height: 1.5rem;
+}
+
+.contact {
+  margin: 1.5rem 0 3rem 0;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact {
+    width: 70%;
+  }
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+}
+.contact__name {
+  font-weight: 600;
+  line-height: 24px;
+}
+.contact__text {
+  line-height: 24px;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .contact__text {
+    margin: 1rem 0;
+  }
+}
+.contact__email {
+  color: #FFF;
+}
+.contact__email--link {
+  text-decoration: none;
+}/*# sourceMappingURL=shows.css.map */

@@ -24,6 +24,15 @@
   font-weight: 600;
 }
 
+// removing default margins/padding and setting my own defaults
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Avenir', Tahoma, sans-serif;
+}
+
 // header styling
 .header {
   background-color: $dark-background-color;
