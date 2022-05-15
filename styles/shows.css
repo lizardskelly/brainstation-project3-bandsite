@@ -248,4 +248,60 @@ body {
   .hero__title {
     padding-left: 8rem;
   }
+}
+
+.shows {
+  color: #323232;
+  margin: 1rem 0;
+}
+.shows__title {
+  font-size: 7vw;
+  font-weight: 700;
+  margin: 1rem;
+}
+@media screen and (min-width: 425px) {
+  .shows__title {
+    font-size: 1.85rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__title {
+    font-size: 2.25rem;
+    margin-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__title {
+    margin-left: 8rem;
+  }
+}
+.shows__posting {
+  padding: 1rem;
+  border-bottom: 1px solid #E1E1E1;
+}
+.shows__header {
+  color: #AFAFAF;
+  font-size: 0.75rem;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .shows__header {
+    display: none;
+  }
+}
+.shows__info {
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0;
+}
+.shows__info--bold {
+  font-weight: 700;
+}
+.shows__button {
+  width: 100%;
+  height: 2.75rem;
+  background-color: #323232;
+  color: #FFF;
+  font-size: 1rem;
+  border-radius: 4px;
 }/*# sourceMappingURL=shows.css.map */
