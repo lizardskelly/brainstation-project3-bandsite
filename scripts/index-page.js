@@ -23,61 +23,63 @@ let commentArray = [
   }
 ];
 
-// function takes values from objects in comment array
-// and displays them in the comments section
-let displayComment = arr => {
-  const postParent = document.getElementById("postParent");
-
-  // clears all comments on the page so they can be
-  // redisplayed with the updated comment array
+// clears all comments on the page so they can be
+// redisplayed with the updated comment array
+const clearComments = postParent => {
   while (postParent.firstChild) {
     postParent.removeChild(postParent.firstChild);
   }
+}
 
-  // starts populating the comment list on the page
-  let i = 0;
-  while (i < arr.length) {
-    // creates the post container and puts it 
-    // at the beginning of the displayed posts
-    const post = document.createElement('div');
-    post.classList.add("post");
-    postParent.prepend(post);
+// function takes values from objects in comment array
+// and displays them in the comments section
+const displayComment = (postParent, comment) => {
+  const post = document.createElement('div');
+  post.classList.add("post");
+  postParent.prepend(post);
 
-    // creates the various elements of each post,
-    // sets them to the proper values pulled from the array,
-    // and appends them to the dom in the proper locations
-    let userAvatar = document.createElement('img');
-    userAvatar.classList.add('post__avatar');
-    userAvatar.setAttribute('src', arr[i].avatar);
-    post.appendChild(userAvatar);
+  // creates the various elements of each post,
+  // sets them to the proper values pulled from the array,
+  // and appends them to the dom in the proper locations
+  let userAvatar = document.createElement('img');
+  userAvatar.classList.add('post__avatar');
+  userAvatar.setAttribute('src', comment.avatar);
+  post.appendChild(userAvatar);
 
-    let textWrapper = document.createElement('div');
-    textWrapper.classList.add('post__text-wrapper');
-    post.appendChild(textWrapper);
+  let textWrapper = document.createElement('div');
+  textWrapper.classList.add('post__text-wrapper');
+  post.appendChild(textWrapper);
 
-    let infoWrapper = document.createElement('div');
-    infoWrapper.classList.add('post__info-wrapper');
-    textWrapper.appendChild(infoWrapper);
+  let infoWrapper = document.createElement('div');
+  infoWrapper.classList.add('post__info-wrapper');
+  textWrapper.appendChild(infoWrapper);
 
-    let name = document.createElement('p');
-    name.classList.add('post__username');
-    name.innerHTML = arr[i].username;
-    infoWrapper.appendChild(name);
+  let name = document.createElement('p');
+  name.classList.add('post__username');
+  name.innerHTML = comment.username;
+  infoWrapper.appendChild(name);
 
-    let time = document.createElement('p');
-    time.classList.add('post__timestamp');
-    time.innerHTML = arr[i].timestamp;
-    infoWrapper.appendChild(time);
+  let time = document.createElement('p');
+  time.classList.add('post__timestamp');
+  time.innerHTML = comment.timestamp;
+  infoWrapper.appendChild(time);
 
-    let text = document.createElement('p');
-    text.classList.add('post__text');
-    text.innerHTML = arr[i].commentText;
-    textWrapper.appendChild(text);
+  let text = document.createElement('p');
+  text.classList.add('post__text');
+  text.innerHTML = comment.commentText;
+  textWrapper.appendChild(text);
+}
 
-    i++
+const commentIterator = comments => {
+  const postParent = document.getElementById("postParent");
+
+  clearComments(postParent);
+
+  for (i = 0; i < comments.length; i++) {
+    displayComment(postParent, comments[i]);
   }
 }
-displayComment(commentArray);
+commentIterator(commentArray);
 
 // form submission event listener 
 const commentForm = document.querySelector('.comments__form');
@@ -100,5 +102,5 @@ commentForm.addEventListener('submit', submitComment = event => {
 
   // resets the form and displays the new comment
   commentForm.reset();
-  displayComment(commentArray);
+  commentIterator(commentArray);
 });
