@@ -137,6 +137,14 @@
       display: flex;
       align-items: center;
     }
+
+    &:hover {
+      background-color: $light-background-color-alt;
+    }
+
+    &--selected {
+      background-color: $border-color;
+    }
   }
 
   &__header {

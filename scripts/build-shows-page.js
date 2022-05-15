@@ -84,3 +84,5 @@ const showsBuilder = arr => {
   }
 };
 showsBuilder(showsList);
+
+//changes shows posting background color on selection

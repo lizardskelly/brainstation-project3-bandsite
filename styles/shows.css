@@ -355,6 +355,12 @@ body {
     align-items: center;
   }
 }
+.shows__posting:hover {
+  background-color: #FAFAFA;
+}
+.shows__posting--selected {
+  background-color: #E1E1E1;
+}
 .shows__header {
   color: #AFAFAF;
   font-size: 0.75rem;
