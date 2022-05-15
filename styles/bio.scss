@@ -226,6 +226,11 @@ body {
     padding: 2rem 0;
   }
 
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     font-size: 7vw;
     font-weight: 600;
@@ -240,6 +245,10 @@ body {
       font-size: 2.25rem;
       margin: 1rem 0 2rem 2.25rem;
     }
+
+    @include desktop {
+      margin-left: 8rem;
+    }
   }
 
   &__container {
@@ -247,6 +256,11 @@ body {
 
     @include tablet {
       margin: 0 6rem;
+    }
+
+    @include desktop {
+      width: 40%;
+      align-self: center;
     }
   }
 

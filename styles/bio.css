@@ -447,6 +447,12 @@ body {
     padding: 2rem 0;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comments {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .comments__title {
   font-size: 7vw;
   font-weight: 600;
@@ -463,12 +469,23 @@ body {
     margin: 1rem 0 2rem 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comments__title {
+    margin-left: 8rem;
+  }
+}
 .comments__container {
   margin: 0 1rem;
 }
 @media screen and (min-width: 768px) {
   .comments__container {
     margin: 0 6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__container {
+    width: 40%;
+    align-self: center;
   }
 }
 .comments__form {
