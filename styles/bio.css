@@ -360,8 +360,6 @@ body {
 }
 
 .gallery {
-  padding-top: 0.5rem;
-  padding-bottom: 0.75rem;
   background-color: #FAFAFA;
   padding: 0.5rem 1rem 0.75rem 1rem;
 }
@@ -438,4 +436,103 @@ body {
   to {
     transform: scale(1.25);
   }
+}
+
+.comments {
+  color: #323232;
+  padding: 0.5rem 0;
+}
+.comments__title {
+  font-size: 7vw;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 1rem;
+}
+@media screen and (min-width: 425px) {
+  .comments__title {
+    font-size: 1.85rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comments__title {
+    font-size: 2.25rem;
+  }
+}
+.comments__container {
+  padding: 0 1rem;
+}
+.comments__form {
+  display: flex;
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 1rem;
+}
+.comments__form-avatar {
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% 50%;
+     object-position: 20% 50%;
+  margin: 1.5rem 0.75rem 0 0;
+}
+.comments__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #AFAFAF;
+}
+.comments__input {
+  background-color: #FAFAFA;
+  height: 2.25rem;
+  width: 100%;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  margin: 0.25rem 0 1rem 0;
+  box-sizing: border-box;
+}
+.comments__inputactive {
+  border-color: #323232;
+}
+.comments__input--height {
+  height: 7rem;
+  padding-bottom: 4.5rem;
+}
+.comments__button {
+  width: 100%;
+  height: 2.75rem;
+  background-color: #323232;
+  color: #FFF;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.post {
+  display: flex;
+  border-bottom: 1px solid #E1E1E1;
+  margin: 0.5rem 0;
+}
+.post__avatar {
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% 50%;
+     object-position: 20% 50%;
+  margin: 1rem 0.75rem 0 0;
+}
+.post__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.post__username {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.post__timestamp {
+  color: #AFAFAF;
+  margin-bottom: 0.75rem;
+}
+.post__text {
+  margin-top: 0;
 }/*# sourceMappingURL=bio.css.map */
