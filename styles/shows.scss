@@ -12,6 +12,7 @@
   @include desktop {
     height: 50vw;
     max-height: 40rem;
+    display: flex;
   }
 
   &__container {
@@ -24,6 +25,13 @@
 
     @include tablet {
       padding: 2rem 2.25rem;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8rem;
     }
   }
 
@@ -48,6 +56,10 @@
     @include tablet {
       font-size: 3.75rem;
     }
+
+    @include desktop {
+      width: 80%;
+    }
   }
 
   &__iframe {
@@ -59,6 +71,11 @@
      width: 26rem;
      height: 10rem;
     }
+    
+    @include desktop {
+      width: 40rem;
+      margin-bottom: 0;
+    }
   }
 }
 // shows section styling
@@ -68,6 +85,10 @@
 
   @include tablet {
     margin: 3rem 0 1rem 0;
+  }
+
+  @include desktop {
+    display: flex;
   }
 
   &__title {
@@ -86,12 +107,26 @@
     }
 
     @include desktop {
-      margin-left: 8rem;
+      margin: 0 8rem;
     }
   }
 
   &__wrapper {
     margin: 0 1rem;
+
+    @include desktop {
+      flex-grow: 1;
+      margin-right: 6rem;
+    }
+  }
+
+  &__header-container {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      margin: 0 1rem;
+    }
   }
 
   &__posting {
@@ -100,7 +135,6 @@
 
     @include tablet {
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
   }
@@ -113,6 +147,21 @@
     @include tablet {
       display: none;
     }
+
+    &--display {
+
+      @include tablet {
+        display: block;
+        width: 25%;
+      }
+
+      &:first-child {
+
+        @include desktop {
+          width: 30%;
+        }
+      }
+    }
   }
 
   &__info {
@@ -121,10 +170,15 @@
 
     @include tablet {
       margin: 0;
+      width: 25%;
     }
 
     &--bold {
       font-weight: 700;
+
+      @include desktop {
+        width: 30%;
+      }
     }
   }
 
