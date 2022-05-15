@@ -372,6 +372,10 @@
     justify-content: space-between;
   }
 
+  &__text-wrapper {
+    flex-grow: 1;
+  }
+
   &__username {
     font-weight: 600;
     margin-bottom: .75rem;

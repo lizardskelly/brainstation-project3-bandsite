@@ -605,6 +605,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.post__text-wrapper {
+  flex-grow: 1;
+}
 .post__username {
   font-weight: 600;
   margin-bottom: 0.75rem;

@@ -1,4 +1,7 @@
-//building the comment array with its placeholder posts
+// building the comment array with its placeholder posts
+// note: im setting the avatar to my placeholder asset
+// because i'm assuming with the next sprint the api we use
+// will include differing user avatars
 let commentArray = [
   {
     username: "Miles Acosta",
@@ -24,6 +27,14 @@ let commentArray = [
 // and displays them in the comments section
 let displayComment = arr => {
   const postParent = document.getElementById("postParent");
+
+  // clears all comments on the page so they can be
+  // redisplayed with the updated comment array
+  while (postParent.firstChild) {
+    postParent.removeChild(postParent.firstChild);
+  }
+
+  // starts populating the comment list on the page
   let i = 0;
   while (i < arr.length) {
     // creates the post container and puts it 
@@ -66,5 +77,28 @@ let displayComment = arr => {
     i++
   }
 }
-
 displayComment(commentArray);
+
+// form submission event listener 
+const commentForm = document.querySelector('.comments__form');
+commentForm.addEventListener('submit', submitComment = event => {
+  event.preventDefault();
+
+  // creates the new post object and defines its keys and values
+  let newPost = {};
+  newPost.username = event.target.username.value;
+  newPost.timestamp = Date.now();
+  // sets the avatar to the src of the avatar on the page
+  // i'm assuming we'll define the src as an image from
+  // the api in the next sprint
+  let userAvatar = document.querySelector('.comments__form-avatar');
+  newPost.avatar = userAvatar.src
+  newPost.commentText = event.target.commentBody.value;
+
+  // adds the new comment object the comment array
+  commentArray.push(newPost);
+
+  // resets the form and displays the new comment
+  commentForm.reset();
+  displayComment(commentArray);
+});
