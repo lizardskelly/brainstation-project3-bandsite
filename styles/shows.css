@@ -213,8 +213,9 @@ body {
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-shows.jpg);
   background-position: center;
   background-size: cover;
-  height: 60vw;
-  padding-top: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media screen and (min-width: 1280px) {
   .hero {
@@ -223,36 +224,61 @@ body {
   }
 }
 .hero__container {
-  width: 75%;
+  width: 100%;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+}
+@media screen and (min-width: 768px) {
+  .hero__container {
+    padding: 2rem 2.25rem;
+  }
 }
 .hero__album-title {
   color: #FFF;
   font-size: 1rem;
   font-weight: 400;
-  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__album-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
 .hero__title {
   color: #FFF;
+  width: 75%;
   font-size: 1.5rem;
   font-weight: 600;
-  padding-left: 1rem;
   margin-top: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
     font-size: 3.75rem;
-    padding-left: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
-  .hero__title {
-    padding-left: 8rem;
+.hero__iframe {
+  width: 18rem;
+  height: 7rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__iframe {
+    width: 26rem;
+    height: 10rem;
   }
 }
 
 .shows {
   color: #323232;
   margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    margin: 3rem 0 1rem 0;
+  }
 }
 .shows__title {
   font-size: 7vw;
@@ -276,9 +302,19 @@ body {
     margin-left: 8rem;
   }
 }
+.shows__wrapper {
+  margin: 0 1rem;
+}
 .shows__posting {
   padding: 1rem;
   border-bottom: 1px solid #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows__posting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .shows__header {
   color: #AFAFAF;
@@ -294,6 +330,11 @@ body {
   font-weight: 600;
   margin: 0.5rem 0 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .shows__info {
+    margin: 0;
+  }
+}
 .shows__info--bold {
   font-weight: 700;
 }
@@ -304,4 +345,10 @@ body {
   color: #FFF;
   font-size: 1rem;
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .shows__button {
+    width: auto;
+    padding: 0 2rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
