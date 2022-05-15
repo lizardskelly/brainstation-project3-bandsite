@@ -222,6 +222,10 @@ body {
   color: $dark-text-color;
   padding: .5rem 0;
 
+  @include tablet {
+    padding: 2rem 0;
+  }
+
   &__title {
     font-size: 7vw;
     font-weight: 600;
@@ -234,17 +238,26 @@ body {
 
     @include tablet {
       font-size: 2.25rem;
+      margin: 1rem 0 2rem 2.25rem;
     }
   }
 
   &__container {
-    padding: 0 1rem;
+    margin: 0 1rem;
+
+    @include tablet {
+      margin: 0 6rem;
+    }
   }
 
   &__form {
     display: flex;
     border-bottom: 1px solid $border-color;
     padding-bottom: 1rem;
+
+    @include tablet {
+      padding-bottom: 2rem;
+    }
   }
 
   &__form-avatar {
@@ -253,13 +266,29 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: 20% 50%;
-    margin: 1.5rem .75rem 0 0;
+    margin: 1rem .75rem 0 0;
+
+    @include tablet {
+      height: 3rem;
+      width: 3rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   &__label {
     font-size: .75rem;
     font-weight: 600;
     color: $secondary-text-color;
+
+    @include tablet {
+      font-size: 1rem;
+    }
   }
 
   &__input {
@@ -269,8 +298,15 @@ body {
     border: 1px solid $border-color;
     border-radius: 4px;
     padding-left: .5rem;
-    margin: .25rem 0 1rem 0;
+    margin: .25rem 0 1.25rem 0;
     box-sizing: border-box;
+
+    @include tablet {
+      height: 3rem;
+      font-size: 1rem;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
 
     &active {
       border-color: $dark-background-color;
@@ -279,6 +315,10 @@ body {
     &--height {
       height: 7rem;
       padding-bottom: 4.5rem;
+
+      @include tablet {
+        padding-bottom: 3.5rem;
+      }
     }
   }
 
@@ -289,6 +329,11 @@ body {
     color: $bright-text-color;
     font-size: 1rem;
     border-radius: 4px;
+
+    @include tablet {
+      width: 35%;
+      align-self: flex-end;
+    }
   }
 }
 
@@ -297,6 +342,10 @@ body {
   border-bottom: 1px solid $border-color;
   margin: .5rem 0;
 
+  @include tablet {
+    padding-bottom: 1rem;
+  }
+
   &__avatar {
     height: 2.25rem;
     width: 2.25rem;
@@ -304,6 +353,11 @@ body {
     object-fit: cover;
     object-position: 20% 50%;
     margin: 1rem .75rem 0 0;
+
+    @include tablet {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 
   &__text-wrapper {
