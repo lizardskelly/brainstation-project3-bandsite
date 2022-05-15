@@ -207,4 +207,45 @@ body {
 }
 .contact__email--link {
   text-decoration: none;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../assets/images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 60vw;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 50vw;
+    max-height: 40rem;
+  }
+}
+.hero__container {
+  width: 75%;
+}
+.hero__album-title {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 1rem;
+}
+.hero__title {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+    padding-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 8rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

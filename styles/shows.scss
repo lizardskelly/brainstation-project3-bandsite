@@ -1,3 +1,45 @@
 @use './partials/variables' as *;
 @use './partials/global' as *;
 @use './partials/mixins' as *;
+
+//hero styling
+.hero {
+  background-image: linear-gradient(rgba(50, 50, 50, .5), rgba(50, 50, 50, .5)), url(../assets/images/hero-shows.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 60vw;
+  padding-top: 1rem;
+
+  @include desktop {
+    height: 50vw;
+    max-height: 40rem;
+  }
+
+  &__container {
+    width: 75%;
+  }
+
+  &__album-title {
+    color: $bright-text-color;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 1rem;
+  }
+
+  &__title {
+    color: $bright-text-color;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    margin-top: .5rem;
+
+    @include tablet {
+      font-size: 3.75rem;
+      padding-left: 2.25rem;
+    }
+
+    @include desktop {
+      padding-left: 8rem;
+    }
+  }
+}
