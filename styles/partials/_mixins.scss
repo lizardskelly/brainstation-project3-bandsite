@@ -14,13 +14,13 @@
 //media queries 
 
 @mixin tablet {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $desktop) {
     @content;
   }
 }
