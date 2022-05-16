@@ -315,7 +315,7 @@
       margin-bottom: 2rem;
     }
 
-    &active {
+    &:active {
       border-color: $dark-background-color;
     }
 
@@ -326,6 +326,10 @@
       @include tablet {
         padding-bottom: 3.5rem;
       }
+    }
+
+    &--error {
+      border-color: $error-color;
     }
   }
 

@@ -548,7 +548,7 @@ body {
     margin-bottom: 2rem;
   }
 }
-.comments__inputactive {
+.comments__input:active {
   border-color: #323232;
 }
 .comments__input--height {
@@ -559,6 +559,9 @@ body {
   .comments__input--height {
     padding-bottom: 3.5rem;
   }
+}
+.comments__input--error {
+  border-color: #D22D2D;
 }
 .comments__button {
   width: 100%;

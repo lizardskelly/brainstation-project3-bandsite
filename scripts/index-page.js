@@ -7,19 +7,19 @@ let commentArray = [
     username: "Miles Acosta",
     timestamp: "12/20/2020",
     avatar: "./assets/images/avatar-placeholder.jpg",
-    commentText: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+    commentBody: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
   },
   {
     username: "Emilie Beach",
     timestamp: "01/09/2021",
     avatar: "./assets/images/avatar-placeholder.jpg",
-    commentText: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+    commentBody: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
   },
   {
     username: "Conner Walton",
     timestamp: "02/17/2021",
     avatar: "./assets/images/avatar-placeholder.jpg",
-    commentText: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+    commentBody: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
   }
 ];
 
@@ -66,11 +66,11 @@ const displayComment = (postParent, comment) => {
 
   let text = document.createElement('p');
   text.classList.add('post__text');
-  text.innerHTML = comment.commentText;
+  text.innerHTML = comment.commentBody;
   textWrapper.appendChild(text);
 }
 
-const commentIterator = comments => {
+const displayComments = comments => {
   const postParent = document.getElementById("postParent");
 
   clearComments(postParent);
@@ -79,28 +79,48 @@ const commentIterator = comments => {
     displayComment(postParent, comments[i]);
   }
 }
-commentIterator(commentArray);
+displayComments(commentArray);
 
 // form submission event listener 
 const commentForm = document.querySelector('.comments__form');
 commentForm.addEventListener('submit', submitComment = event => {
   event.preventDefault();
 
-  // creates the new post object and defines its keys and values
+  // clears any active errors
+  document.getElementById('username').classList.remove('comments__input--error');
+  document.getElementById('comment-body').classList.remove('comments__input--error');
+
   let newPost = {};
-  newPost.username = event.target.username.value;
+
+  // checks username input for errors and sets value if good
+  const username = event.target.username.value;
+  if(username.length > 0) {
+    newPost.username = username;
+  } else {
+    document.getElementById('username').classList.add('comments__input--error');
+    return;
+  }
+  
   newPost.timestamp = Date.now();
   // sets the avatar to the src of the avatar on the page
   // i'm assuming we'll define the src as an image from
   // the api in the next sprint
   let userAvatar = document.querySelector('.comments__form-avatar');
   newPost.avatar = userAvatar.src
-  newPost.commentText = event.target.commentBody.value;
+
+  //checks comment body input for errors and sets value if good
+  const commentBody = event.target.commentBody.value;
+  if (commentBody.length > 0) {
+    newPost.commentBody = commentBody;
+  } else {
+    document.getElementById('comment-body').classList.add('comments__input--error');
+    return;
+  }
 
   // adds the new comment object the comment array
   commentArray.push(newPost);
 
   // resets the form and displays the new comment
   commentForm.reset();
-  commentIterator(commentArray);
+  displayComments(commentArray);
 });
