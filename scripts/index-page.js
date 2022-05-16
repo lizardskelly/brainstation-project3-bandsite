@@ -101,7 +101,9 @@ commentForm.addEventListener('submit', submitComment = event => {
     return;
   }
   
-  newPost.timestamp = Date.now();
+  // formats date and sets it to the correct value
+  let now = new Date()
+  newPost.timestamp = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
   // sets the avatar to the src of the avatar on the page
   // i'm assuming we'll define the src as an image from
   // the api in the next sprint
