@@ -140,10 +140,15 @@
 
     &:hover {
       background-color: $light-background-color-alt;
+      cursor: pointer;
     }
 
     &--selected {
       background-color: $border-color;
+
+      &:hover {
+        background-color: $border-color;
+      }
     }
   }
 

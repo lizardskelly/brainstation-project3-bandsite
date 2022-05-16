@@ -357,8 +357,12 @@ body {
 }
 .shows__posting:hover {
   background-color: #FAFAFA;
+  cursor: pointer;
 }
 .shows__posting--selected {
+  background-color: #E1E1E1;
+}
+.shows__posting--selected:hover {
   background-color: #E1E1E1;
 }
 .shows__header {

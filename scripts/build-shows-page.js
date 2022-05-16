@@ -86,3 +86,14 @@ const showsBuilder = arr => {
 showsBuilder(showsList);
 
 //changes shows posting background color on selection
+const showList = document.querySelectorAll('.shows__posting');
+for(i = 0; i < showList.length; i++) {
+  const show = showList[i];
+  show.addEventListener("click", event => {
+    const previouslySelected = document.querySelector('.shows__posting--selected');
+    if (previouslySelected) {
+      previouslySelected.classList.remove('shows__posting--selected');
+    }
+    show.classList.add('shows__posting--selected');
+  })
+}
