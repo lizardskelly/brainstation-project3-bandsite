@@ -36,6 +36,7 @@ const displayComment = (postParent, comment) => {
   let userAvatar = document.createElement('img');
   userAvatar.classList.add('post__avatar');
   userAvatar.setAttribute('src', '../assets/images/avatar-placeholder.jpg');
+  userAvatar.setAttribute('alt', 'user avatar')
   post.appendChild(userAvatar);
 
   let textWrapper = document.createElement('div');
