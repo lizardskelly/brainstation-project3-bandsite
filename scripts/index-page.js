@@ -75,8 +75,13 @@ const renderComments = comments => {
 
   clearComments(postParent);
 
-  for (i = 0; i < comments.length; i++) {
-    displayComment(postParent, comments[i]);
+  //sorts received comments in descending timestamp order
+  const sortedComments = comments.sort((a, b) => {
+    return a.timestamp - b.timestamp;
+  })
+  
+  for (i = 0; i < sortedComments.length; i++) {
+    displayComment(postParent, sortedComments[i]);
   }
 }
 
